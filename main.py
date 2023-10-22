@@ -18,7 +18,10 @@ import statistics
 parser = argparse.ArgumentParser(description='Solana snapshot finder')
 parser.add_argument('-t', '--threads-count', default=1000, type=int,
                     help='the number of concurrently running threads that check snapshots for rpc nodes')
-
+parser.add_argument('-r', '--rpc_address',
+    default='https://api.mainnet-beta.solana.com', type=str,
+    help='RPC address of the node from which the current slot number will be taken\n'
+         'https://api.mainnet-beta.solana.com')
 parser.add_argument('--max_snapshot_age', default=10000, type=int,
                     help='How many slots ago the snapshot was created (in slots)')
 parser.add_argument('--min_download_speed', default=60, type=int,
@@ -44,6 +47,7 @@ parser.add_argument('-b', '--blacklist', default='', type=str,
 args = parser.parse_args()
 
 DEFAULT_HEADERS = {"Content-Type": "application/json"}
+RPC = args.rpc_address
 MAX_SNAPSHOT_AGE_IN_SLOTS = args.max_snapshot_age
 THREADS_COUNT = args.threads_count
 MIN_DOWNLOAD_SPEED_MB = args.min_download_speed
