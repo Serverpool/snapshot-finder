@@ -72,26 +72,14 @@ FULL_LOCAL_SNAPSHOTS = []
 unsuitable_servers = set()
 # Configure Logging
 logging.getLogger('urllib3').setLevel(logging.WARNING)
-if args.verbose:
-    logging.basicConfig(
-        level=logging.DEBUG,
-        format="%(asctime)s [%(levelname)s] %(message)s",
-        handlers=[
-            logging.FileHandler(f'{SNAPSHOT_PATH}/snapshot-finder.log'),
-            logging.StreamHandler(sys.stdout),
-        ]
-    )
-
-else:
-    # logging.basicConfig(stream=sys.stdout, encoding='utf-8', level=logging.INFO, format='|%(asctime)s| %(message)s')
-    logging.basicConfig(
-        level=logging.INFO,
-        format="%(asctime)s [%(levelname)s] %(message)s",
-        handlers=[
-            logging.FileHandler(f'{SNAPSHOT_PATH}/snapshot-finder.log'),
-            logging.StreamHandler(sys.stdout),
-        ]
-    )
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[
+        logging.FileHandler(f'{SNAPSHOT_PATH}/snapshot-finder.log'),
+        logging.StreamHandler(sys.stdout),
+    ]
+)
 logger = logging.getLogger(__name__)
 
 
