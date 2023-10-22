@@ -416,14 +416,12 @@ def main_worker():
         return 1
 
 
-logger.info(f'{RPC=}\n'
-            f'{MAX_SNAPSHOT_AGE_IN_SLOTS=}\n'
+logger.info(f'{MAX_SNAPSHOT_AGE_IN_SLOTS=}\n'
             f'{MIN_DOWNLOAD_SPEED_MB=}\n'
             f'{MAX_DOWNLOAD_SPEED_MB=}\n'
             f'{SNAPSHOT_PATH=}\n'
             f'{THREADS_COUNT=}\n'
             f'{NUM_OF_MAX_ATTEMPTS=}\n'
-            f'{WITH_PRIVATE_RPC=}\n'
             f'{SORT_ORDER=}')
 
 try:
