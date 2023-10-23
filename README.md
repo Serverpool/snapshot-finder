@@ -1,6 +1,6 @@
 # ServerPool local snapshot-finder
 
-Форк оригинального solana-snapshot-finder, адаптированного для поиска Mainnet снепшотов сети Solana в локальной сети ДЦ ServerPool.
+Форк оригинального solana-snapshot-finder, адаптированного для поиска Mainnet снепшотов сети Solana в локальной сети ДЦ [ServerPool.io](https://serverpool.io/).
 
 #### Как работает скрипт?
 
