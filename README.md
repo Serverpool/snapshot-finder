@@ -2,12 +2,6 @@
 
 Форк оригинального solana-snapshot-finder, адаптированного для поиска Mainnet снепшотов сети Solana в локальной сети ДЦ ServerPool.
 
-![](https://serverpool.io/serverpool_finder.png)
-
-
-
-[TOC]
-
 #### Как работает скрипт?
 
 - Скрипт работает аналогично оригинальному solana-snapshot-finder.
